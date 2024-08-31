@@ -4,31 +4,17 @@
     color: white;
 }
 
-/* COLORS
-WHITE : #FFFFFF
-GRAYZINHO : #F2F2F0
-GRAY: #ACB0AF
-GRAYZAO: #6B6B6B
-PRETO: #030302
-ROSA: #e62555 */
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
-
 body {
     background-color: #0f0f0f;
 }
 
-body > header {
+/* ESTILOS PARA O HEADER */
+
+body>header {
     padding: 16px 32px;
     border-bottom: 1px solid #303030;
     max-height: 60px;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,17 +46,18 @@ body > header {
 
     a:hover {
         color: transparent;
-        background-image: radial-gradient(circle, rgba(255,29,85,1) 39%, rgba(149,41,79,1) 100%);
+        background-image: radial-gradient(circle, rgba(255, 29, 85, 1) 39%, rgba(149, 41, 79, 1) 100%);
         -webkit-background-clip: text;
         background-clip: text;
     }
 }
 
+/* CLASSES GLOBAIS PARA FONTES E SVGS */
+
 .color-pink-gradient {
     color: transparent;
-    background-image: radial-gradient(circle, rgba(255,29,85,1) 70%, rgba(149,41,79,1) 100%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.); /* Sombras no texto */
-
+    background-image: radial-gradient(circle, rgba(255, 29, 85, 1) 70%, rgba(149, 41, 79, 1) 100%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -85,7 +72,8 @@ body > header {
     height: 40px;
 }
 
-.hover-svg-30:hover, .hover-svg-40:hover {
+.hover-svg-30:hover,
+.hover-svg-40:hover {
     svg {
         transition: 0.7s;
         fill: #e62555;
@@ -94,11 +82,12 @@ body > header {
 
 .color-pink {
     color: transparent;
-    background-image: radial-gradient(circle, rgba(255,29,85,1) 90%, rgba(227,25,96,1) 80%);
-
+    background-image: radial-gradient(circle, rgba(255, 29, 85, 1) 90%, rgba(227, 25, 96, 1) 80%);
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+/* ESTILOS GLOBAIS PARA CONTAINER */
 
 .list-icons {
     display: flex;
@@ -113,6 +102,8 @@ section {
     max-height: 100vh;
     padding-inline: 10%;
 }
+
+/* ESTILOS DA SESSÃO SOBRE MIM */
 
 .section-sobre-mim {
     display: flex;
@@ -133,7 +124,7 @@ section {
         padding: 32px;
         max-height: 500px;
         height: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona a sombra */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
         img {
             object-fit: contain;
@@ -173,7 +164,7 @@ section {
             border-radius: 8px;
             padding: 20px;
             background-color: #303030;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona a sombra */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             border: 1px solid #3d3d3d;
 
         }
@@ -211,7 +202,10 @@ section {
 
 }
 
-.section-formacao, .section-portfolio {
+/* ESTILOS DA SESSÃO FORMAÇÃO E PORTFOLIO */
+
+.section-formacao,
+.section-portfolio {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -242,7 +236,7 @@ section {
             border-radius: 8px;
             padding: 20px;
             background-color: #303030;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona a sombra */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             border: 1px solid #3d3d3d;
 
 
@@ -277,7 +271,9 @@ section {
         .card-color-reverse {
             background-color: rgba(255, 255, 255, 0.884);
             border: 1px solid #a3a3a3;
-            p, span {
+
+            p,
+            span {
                 color: #353535;
             }
         }
@@ -287,7 +283,6 @@ section {
             flex-direction: row;
             gap: 24px;
             align-items: center;
-            justify-content: center;
 
             .container-border {
                 display: flex;
@@ -311,13 +306,7 @@ section {
     }
 }
 
-.dots {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px
-}
+/* ESTILOS DA SESSÃO DE CONTATOS */
 
 .section-contato {
     display: flex;
@@ -373,6 +362,8 @@ section {
     }
 }
 
+/* ESTILO PARA RESPONSIVIDADE */
+
 @media only screen and (max-width: 1080px) {
 
     header {
@@ -389,6 +380,7 @@ section {
         height: 100% !important;
         margin-block: 32px;
     }
+
     .section-sobre-mim {
         flex-wrap: wrap;
 
@@ -397,13 +389,14 @@ section {
         }
     }
 
-    .container-cards, .list-competencias {
+    .container-cards,
+    .list-competencias {
         flex-wrap: wrap;
     }
 
-    .card-informacao{
+    .card-informacao {
         img {
             width: 100% !important;
         }
     }
-  }
+}
